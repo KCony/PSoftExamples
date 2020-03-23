@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class IOExcDemo {
-//	public static void main(String[] args)                                              throws IOException { 
+	//public static void main(String[] args) throws IOException { 
 	public static void main(String[] args) { 
         FileReader file = new FileReader("C:\\test\\a.txt"); 
         BufferedReader fileInput = new BufferedReader(file); 

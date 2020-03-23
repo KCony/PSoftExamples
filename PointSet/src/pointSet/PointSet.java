@@ -59,7 +59,11 @@ public class PointSet {
 		lp.remove(p1);
 		ps.print();  // safe?
 		
-		p1.setY(57);
-		ps.print();  // Huh?!
+//		p1.setY(57);
+//		ps.print();  // Huh?!
+		
+//		p1.setX(3);
+//		p1.setY(3);
+//		ps.print(); // Uh-oh
 	}
 }

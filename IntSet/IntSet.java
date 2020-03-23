@@ -1,17 +1,23 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.Iterator;
 
 public class IntSet {
 	private List<Integer> data = new ArrayList<Integer>();
 	
 	public void add(Integer x) { 
+		checkRep();
 		if(! data.contains(x))
-			data.add(x); 
+			data.add(x);
+		checkRep();
 	}
 	
 	public void remove(Integer x) {
+		checkRep();
 		data.remove(x);
+		checkRep();
 	}
 	public boolean contains(Integer x) {
 		return data.contains(x);
@@ -22,13 +28,24 @@ public class IntSet {
 	public List<Integer> getElements() { return data;}
 	
 	public void print() {
+		checkRep();
 		for(Integer i : data) {
 			System.out.println(i);
 		}
+		checkRep();
 	}
 	
 	public Iterator<Integer> iterator() {
 		return data.iterator(); 
+	}
+	
+	private void checkRep() {
+		for(Integer d : data)
+			if(d == null)
+				throw new NullPointerException("null data");
+		Set<Integer> set = new HashSet<Integer>(data);
+		if(set.size() != data.size())
+		     throw new RuntimeException("duplicates!");
 	}
 		  
 	public static void main(String[] args) {
@@ -42,7 +59,8 @@ public class IntSet {
 		
 		Iterator<Integer> it = set1.iterator();
 		it.next();
-		it.remove();
+//		it.remove();
+//		it.add(2);
 		set1.print();
 	}
 

@@ -25,13 +25,17 @@ class IntIterator {
 public class IntSet2 {
 	private List<Integer> data = new ArrayList<Integer>();
 
-	public void add(Integer x) { 
+	public void add(Integer x) {
+		checkRep();
 		if(! data.contains(x))
-			data.add(x); 
+			data.add(x);
+		checkRep();
 	}
 
 	public void remove(Integer x) {
+		checkRep();
 		data.remove(x);
+		checkRep();
 	}
 	public boolean contains(Integer x) {
 		return data.contains(x);
@@ -44,12 +48,17 @@ public class IntSet2 {
 	public List<Integer> getElements() { return data;}
 
 	public void print() {
+		checkRep();
 		for(Integer i : data) {
 			System.out.println(i);
 		}
+		checkRep();
 	}
 	
 	private void checkRep() {
+		for(Integer d : data)
+			if(d == null)
+				throw new NullPointerException("null data");
 		Set<Integer> set = new HashSet<Integer>(data);
 		if(set.size() != data.size())
 		     throw new RuntimeException("duplicates!");
@@ -71,8 +80,8 @@ public class IntSet2 {
 
 		IntIterator it = set1.iterator();
 		it.next();
-//		 this will cause an error
-//		 it.remove();
+//		it.add(2);
+//		it.remove();
 		set1.print();
 	}
 

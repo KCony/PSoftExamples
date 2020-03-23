@@ -33,10 +33,10 @@ public class Duration1 {
 		System.out.println(d2.equals(d3));
 		System.out.println(d1.equals(d3) + "\n");
 
-		System.out.println("Objects");		
-		Object do1 = new Duration(10,5);
-		Object do2 = new Duration(10,5);
-		System.out.println(do1.equals(do2)); 
+//		System.out.println("Objects");		
+//		Object do1 = new Duration(10,5);
+//		Object do2 = new Duration(10,5);
+//		System.out.println(do1.equals(do2)); 
 	}
 
 }

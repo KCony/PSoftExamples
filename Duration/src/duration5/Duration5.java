@@ -15,7 +15,8 @@ class Duration {
 		if (! (o instanceof Duration) ) 
 			return false;
 		Duration d = (Duration) o;
-		return this.min == d.min && this.sec == d.sec;  
+		//if (d.nano != 0) return false;
+		return this.min == d.min && this.sec == d.sec;
 	}
 }
 
@@ -35,6 +36,7 @@ class NanoDuration extends Duration {
 			return false;
 		if (! (o instanceof NanoDuration) ) 
 			return super.equals(o);
+		    //return super.equals(o) && nano == 0;
 		NanoDuration nd = (NanoDuration) o;
 		return super.equals(nd) && nd.nano == nano;  
 	}
