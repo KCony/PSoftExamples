@@ -10,20 +10,20 @@ public class WildCardContravariant {
 		Integer i;
 //		PositiveInteger p; // extends Integer
 
-		List<? super Integer> lei;
+		List<? super Integer> lsi;
 
-		lei = new ArrayList<Object>();
-		lei = new ArrayList<Number>();
-		lei = new ArrayList<Integer>();
+		lsi = new ArrayList<Object>();
+		lsi = new ArrayList<Number>();
+		lsi = new ArrayList<Integer>();
 		
-		lei.add(o);
-		lei.add(n);
-		lei.add(i);
+		lsi.add(o);
+		lsi.add(n);
+		lsi.add(i);
 //		lei.add(p); 
-		lei.add(null);
+		lsi.add(null);
 		
-		o = lei.get(0);
-		n = lei.get(0);
-		i = lei.get(0);
+		o = lsi.get(0);
+		n = lsi.get(0);
+		i = lsi.get(0);
 	}
 }

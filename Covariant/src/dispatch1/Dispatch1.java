@@ -46,7 +46,7 @@ public class Dispatch1 {
 		X x = a.m(o);
 
 
-		A a2 = new C();
+		A a2 = new C(); // Try changing to C a2 = ...
 		Object o2 = new Z();
 		// Which m is called?
 		X x2 = a2.m(o2);	    

@@ -2,7 +2,7 @@ package genericMethodDemo;
 
 public class GenericMethodDemo {
 	// generic method printArray
-	public static < E > void printArray( E[] inputArray ) {
+	public static <E> void printArray(E[] inputArray) {
 		// Display array elements
 		for(E element : inputArray) {
 			System.out.printf("%s ", element);

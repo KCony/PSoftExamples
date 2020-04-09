@@ -3,10 +3,10 @@ package subtypeTest;
 public class ArraySubtypeTest {
 
 	public static void main(String[] args) {
-		Number n;					
-		Number[] na;				
-		Integer i;					
-		Integer[] ia;
+		Number n = 2.7;					
+		Number[] na = new Number[10];				
+		Integer i = 42;					
+		Integer[] ia = new Integer[10];
 		
 		na[0] = n;					
 		na[1] = i;	

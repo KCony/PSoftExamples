@@ -3,15 +3,15 @@ package incTest;
 class B {
 	private int c=0;
 	
-//	void inc1() { 
-//		System.out.println("B: inc1 version 1"); 
-//		c++; 
-//	}
+	void inc1() { 
+		System.out.println("B: inc1 version 1"); 
+		c++; 
+	}
 	
-	 void inc1() { 		
-		System.out.println("B: inc1 version 2"); 
-		inc2();    // call this.inc2() - in second case this is an A
-	 }
+//	 void inc1() { 		
+//		System.out.println("B: inc1 version 2"); 
+//		inc2();    // call this.inc2() - in second case this is an A
+//	 }
 	
 	void inc2() { 
 		System.out.println("B: inc2"); 

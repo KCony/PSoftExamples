@@ -8,7 +8,7 @@ class Animal {
 	}
 	
 	// change to Animal
-	void sayHello(Giraffe g) {
+	void sayHello(Animal g) {
 		System.out.println("Animal.sayHello: My name is " + name);
 	}
 }
