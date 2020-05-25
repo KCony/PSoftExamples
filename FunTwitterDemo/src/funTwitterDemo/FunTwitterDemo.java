@@ -15,7 +15,7 @@ interface Subject {
 }
 
 class Feed implements Subject {
-    private final List<Observer> observers = new ArrayList < > ();
+    private final List<Observer> observers = new ArrayList<>();
 
     public void registerObserver(Observer o) {
         this.observers.add(o);

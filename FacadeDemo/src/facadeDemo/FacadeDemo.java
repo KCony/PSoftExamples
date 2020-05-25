@@ -12,7 +12,7 @@ class AccountDebitor{
 // Credit to Account
 class AccountCreditor{
 	public void creditAccount(String accNo, Double amount){
-		System.out.println("Credi " + amount + " into account: " + accNo);
+		System.out.println("Credit " + amount + " into account: " + accNo);
 	} 
 }
 

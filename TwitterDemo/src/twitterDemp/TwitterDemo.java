@@ -12,7 +12,7 @@ class NYTimes implements Observer {
     @Override
     public void inform(String tweet) {
         if (tweet != null && tweet.contains("money")) {
-            System.out.println("Breaking news in NY!" + tweet);
+            System.out.println("Breaking news in NY! " + tweet);
         }
     }
 }
@@ -43,7 +43,7 @@ interface Subject {
 
 // Model
 class Feed implements Subject {
-    private final List<Observer> observers = new ArrayList < > ();
+    private final List<Observer> observers = new ArrayList<>();
 
     public void registerObserver(Observer o) {
         this.observers.add(o);
@@ -62,7 +62,7 @@ public class TwitterDemo {
 	    f.registerObserver(new NYTimes());
 	    f.registerObserver(new Guardian());
 	    f.registerObserver(new LeMonde());
-	    f.notifyObservers("Save money.!");
+	    f.notifyObservers("Save money!");
 	    f.notifyObservers("queen gives speech");
 	}
 
