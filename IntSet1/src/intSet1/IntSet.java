@@ -29,7 +29,7 @@ public class IntSet {
 
 	public List<Integer> getElements() { return data;}
 
-	//public List<Integer> getElements() { return new ArrayList(data);}
+//	public List<Integer> getElements() { return new ArrayList<Integer>(data);}
 
 	public void print() {
 		checkRep();

@@ -25,6 +25,12 @@ public class UniquefyDemo {
 //		return lst2;
 //	}
 
+//	static void uniquefy(List<Integer> lst) {
+//		List<Integer> lst2 = lst.stream().distinct().collect(Collectors.toList());
+//		lst.clear();
+//		lst.addAll(lst2);
+//	}
+
 	public static void main(String args[]) {
 		List<Integer> lst = new ArrayList<Integer>(Arrays.asList(1,1,2,2,3));
 		//List<Integer> lst = new ArrayList<Integer>(Arrays.asList(1,1,2,3,4,4,4,5,6,1));

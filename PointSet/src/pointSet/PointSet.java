@@ -37,7 +37,7 @@ public class PointSet {
 	}
 	public int size() { return data.size(); };
 
-	public List<Point> getElements() { return new ArrayList(data);}
+	public List<Point> getElements() { return new ArrayList<Point>(data); }
 
 	public void print() {
 		for(Point p : data) {
@@ -49,14 +49,17 @@ public class PointSet {
 	public static void main(String[] args) {
 		Point p1 = new Point(1,2);
 		Point p2 = new Point(3,3);
+		Point p3 = new Point(1,2);
 		
 		PointSet ps = new PointSet();
 		ps.add(p1);
 		ps.add(p2);
+//		ps.add(p3);
 		ps.print();
 		
 		List<Point> lp = ps.getElements();
-		lp.remove(p1);
+//		lp.remove(p1);
+//		ps.remove(p3);
 		ps.print();  // safe?
 		
 //		p1.setY(57);
