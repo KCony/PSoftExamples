@@ -9,6 +9,9 @@ public class StackDemo {
         System.out.printf("Static initializer, x = %d, y = %d, StackDemo.y = %d%n", x, y, StackDemo.y);
         //System.out.printf("this.x = %n", this.x); // Error: 'StackDemo.this' cannot be referenced from a static context
     }
+    {
+        x = 90;
+    }
     public static void print(String x, StringBuilder y) {
         System.out.printf("%s%n", x);
         String z = y.append(" as StringBuilder").toString();
@@ -20,9 +23,10 @@ public class StackDemo {
         System.out.printf("Instance initializer, x = %d, y = %d, StackDemo.y = %d, this.x = %d, this.y = %d%n",
                 x, y, StackDemo.y, this.x, this.y); //Warning: Static member 'StackDemo.y' accessed via instance reference
     }
-    public /*void*/ StackDemo() {  // No return type for the constructor!
+    public /* void */ StackDemo() {  // No return type for the constructor!
         int x = 25;
         int y = 115;
+        this.x = 990;
         System.out.printf("Constructor, x = %d, y = %d, StackDemo.y = %d, this.x = %d, this.y = %d%n",
                 x, y, StackDemo.y, this.x, this.y);
     }
@@ -57,6 +61,7 @@ public class StackDemo {
         // int result = sumSquares(30, 120); // Non-static method 'sumSquares(int, int)' cannot be referenced from a static context
         int result = 0;
         result = aStackDemo.sumSquares(30, 120);
+        // aStackDemo.StackDemo();
         System.out.printf("main, StackDemo.y = %d, result = %d%n", StackDemo.y, result);
         String x = null;
         x = String.format("StackDemo object printed on %tB %<te %<tY at %<tT %<Tp", new Date());
