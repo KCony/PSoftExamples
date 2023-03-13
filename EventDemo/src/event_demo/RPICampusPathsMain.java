@@ -10,7 +10,7 @@ public class RPICampusPathsMain {
           {
              public void run()
              {
-                JFrame frame = new RPIMapFrame();
+            	RPIMapFrame frame = new RPIMapFrame();
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setVisible(true);
              }

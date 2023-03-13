@@ -55,6 +55,7 @@ public class IntSet {
 		s.add(28);
 		s.add(28);
 		s.print();
+//		s.data.add(28);
 
 		List<Integer> li = s.getElements();
 //		li.remove(0); // alters s?

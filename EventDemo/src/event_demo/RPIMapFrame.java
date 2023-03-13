@@ -11,17 +11,19 @@ import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
 
 public class RPIMapFrame extends JFrame implements PropertyChangeListener {
-    public RPIMapFrame()
+	public RPIMapFrame()
     {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
         setTitle("RPI Campus Path Finder");
         model.init();
-
-        JPanel mapPanel = new JPanel();
-        mapPanel.setLayout(new GridLayout(0, 1));
-        map = new MapComponent(model, this);
-        mapPanel.add(map, BorderLayout.CENTER);
-        add(mapPanel);
+        
+        map = new MapComponent(model, this); 
+        JScrollPane scrollableMapArea = new JScrollPane(map);
+  
+        scrollableMapArea.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);  
+        scrollableMapArea.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        
+        add(scrollableMapArea);
 
         JPanel statusBar = new JPanel(new FlowLayout(FlowLayout.LEFT));
         statusBar.setBorder(new CompoundBorder(new LineBorder(Color.DARK_GRAY),
@@ -37,10 +39,11 @@ public class RPIMapFrame extends JFrame implements PropertyChangeListener {
             status.setText((String)e.getNewValue());
         }
     }
-
+    
     public static final int DEFAULT_WIDTH = 1024;
     public static final int DEFAULT_HEIGHT = 768;
-    private MapComponent map;
+    public MapComponent map;
     private JLabel status;
     private Model model = new Model();
+    private static final long serialVersionUID = 1L;
 }
