@@ -59,6 +59,8 @@ public class SandwichDemo {
 
 		//adding extra cheese using Decorator Pattern
 		mySandwich = new CheeseDecorator(mySandwich);
+		//adding extra double cheese using Decorator Pattern
+		mySandwich = new CheeseDecorator(new CheeseDecorator(mySandwich));
 		System.out.printf("Price of %s is $%.2f %n", mySandwich.getDescription(), 
 				mySandwich.price());
 	}

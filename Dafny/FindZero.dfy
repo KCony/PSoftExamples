@@ -20,7 +20,7 @@ method FindZero(a: array?<nat>) returns (index: int)
 method Main() {
   var arr := null;
   var a: int := FindZero(arr);
-  print a;
+  print a, "\n";
   arr := new nat[][3, 4, 0, 17];
   a := FindZero(arr);
   print a;

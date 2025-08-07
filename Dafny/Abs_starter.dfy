@@ -1,7 +1,7 @@
-method  Abs(x: int) returns (x’: int)
+method Abs(x: int) returns (x': int)
 {
-  x’ := x;
-  if(x’ < 0) { x’ := x’ *  -1; }
+  x' := x;
+  if (x' < 0) { x' := x' *  -1; }
 }
 
 method Testing()
